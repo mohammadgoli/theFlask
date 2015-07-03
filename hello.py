@@ -31,6 +31,13 @@ def float_type(value):
 def path_type(value):
 	print value
 	return "correct"
+#added 
+@app.route("/name/<name>")
+def index(name):
+	if name.lower() == "mohammad":
+		return "Hello, {}".format(name)
+	else:
+		return "Not Found!", 404
 
 
 if __name__ == "__main__":
